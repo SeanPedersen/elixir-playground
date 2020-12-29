@@ -20,6 +20,12 @@ defmodule QuickMaths do
     end
   end
 
+  @spec get_primes(number) :: list(number)
+  def get_primes(max_n) do
+    # Return list of primes from 1 to max_n
+    for x <- 1..max_n, is_prime(x), do: x
+  end
+
   @spec fibo(number) :: number
   def fibo(n) do
     case n do
