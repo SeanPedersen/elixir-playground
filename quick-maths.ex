@@ -26,6 +26,12 @@ defmodule QuickMaths do
     for x <- 1..max_n, is_prime(x), do: x
   end
 
+  @spec sum_primes(number) :: number
+  def sum_primes(max_n) do
+    # Return sum of primes up to max_n
+    get_primes(max_n) |> Enum.sum
+  end
+
   @spec fibo(number) :: number
   def fibo(n) do
     case n do
