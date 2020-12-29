@@ -13,6 +13,7 @@ defmodule QuickMaths do
     end
   end
 
+  # Tail optimized version
   @spec fibo_(number) :: number
   def fibo_(n) do
     fibo(n, 0, 1)
