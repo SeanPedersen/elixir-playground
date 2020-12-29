@@ -1,12 +1,10 @@
 defmodule QuickMaths do
-  def sum(a, b) do
-    a + b
-  end
+  @pi 3.14159
 
-  def mul(a, b) do
-    a * b
-  end
+  @spec circle_area(number) :: number
+  def circle_area(r), do: r * r * @pi
 
+  @spec fibo(number) :: number
   def fibo(n) do
     case n do
       1 -> 1
@@ -15,6 +13,7 @@ defmodule QuickMaths do
     end
   end
 
+  @spec fibo_(number) :: number
   def fibo_(n) do
     fibo(n, 0, 1)
   end
